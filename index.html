@@ -6,24 +6,31 @@
 </head>
 
 <body>
-  <input type="button" value="night" onclick="
-  document.querySelector('body').style.backgroundColor = 'black';
-  document.querySelector('body').style.color = 'white';">
-
-  <input type="button" value="day" onclick=
-  "document.querySelector('body').style.backgroundColor = 'white';
-  document.querySelector('body').style.color = 'black';">
-
-  <input type = "button" value = "day" onclick=
-  "if(document.querySelector('body').style.backgroundColor == 'black')
+  <input type = "button" value = "night" onclick=
+  " var target = document.querySelector('body');
+  if(this.value == 'day')
   {
-     document.querySelector('body').style.backgroundColor = 'white';
-     document.querySelector('body').style.color = 'black';
+     target.style.backgroundColor = 'white';
+     target.style.color = 'black';
      this.value = 'night';
+     var links = document.querySelectorAll('a');
+     var i = 0;
+     while(i<links.length)
+     {
+       links[i].style.color = 'blue';
+       i = i+1;
+     }
   }
   else{
-    document.querySelector('body').style.backgroundColor = 'black';
-    document.querySelector('body').style.color = 'white';
+    var links = document.querySelectorAll('a');
+    var i = 0;
+    while(i<links.length)
+    {
+      links[i].style.color = 'powderblue';
+      i = i+1;
+    }
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
     this.value = 'day';
   }">
 
@@ -88,5 +95,33 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+<input type = "button" value = "night" onclick=
+" var target = document.querySelector('body');
+if(this.value == 'day')
+{
+   target.style.backgroundColor = 'white';
+   target.style.color = 'black';
+   this.value = 'night';
+   var links = document.querySelectorAll('a');
+   var i = 0;
+   while(i<links.length)
+   {
+     links[i].style.color = 'blue';
+     i = i+1;
+   }
+}
+else{
+  var links = document.querySelectorAll('a');
+  var i = 0;
+  while(i<links.length)
+  {
+    links[i].style.color = 'powderblue';
+    i = i+1;
+  }
+  target.style.backgroundColor = 'black';
+  target.style.color = 'white';
+  this.value = 'day';
+}">
+
 </body>
 </html>

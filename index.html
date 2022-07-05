@@ -3,38 +3,14 @@
 <head>
   <title>WEB</title>
   <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="colors.js">
+  </script>
 </head>
 
 <body>
-  <input type = "button" value = "night" onclick=
-  " var target = document.querySelector('body');
-  if(this.value == 'day')
-  {
-     target.style.backgroundColor = 'white';
-     target.style.color = 'black';
-     this.value = 'night';
-     var links = document.querySelectorAll('a');
-     var i = 0;
-     while(i<links.length)
-     {
-       links[i].style.color = 'blue';
-       i = i+1;
-     }
-  }
-  else{
-    var links = document.querySelectorAll('a');
-    var i = 0;
-    while(i<links.length)
-    {
-      links[i].style.color = 'powderblue';
-      i = i+1;
-    }
-    target.style.backgroundColor = 'black';
-    target.style.color = 'white';
-    this.value = 'day';
-  }">
-
-
+  <input type = "button" value = "day" onclick=
+  "nightDayHandler(this)">
   <h1><a href="index.html" target="_blank">WEB</a></h1>
   <ol>
     <li><a href="1.html" target="_blank">HTML</a></l1>
@@ -96,32 +72,6 @@ s0.parentNode.insertBefore(s1,s0);
 </script>
 <!--End of Tawk.to Script-->
 <input type = "button" value = "night" onclick=
-" var target = document.querySelector('body');
-if(this.value == 'day')
-{
-   target.style.backgroundColor = 'white';
-   target.style.color = 'black';
-   this.value = 'night';
-   var links = document.querySelectorAll('a');
-   var i = 0;
-   while(i<links.length)
-   {
-     links[i].style.color = 'blue';
-     i = i+1;
-   }
-}
-else{
-  var links = document.querySelectorAll('a');
-  var i = 0;
-  while(i<links.length)
-  {
-    links[i].style.color = 'powderblue';
-    i = i+1;
-  }
-  target.style.backgroundColor = 'black';
-  target.style.color = 'white';
-  this.value = 'day';
-}">
-
+"nightDayHandler(this)" >
 </body>
 </html>
